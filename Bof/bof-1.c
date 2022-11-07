@@ -1,4 +1,8 @@
+// Buffer Over Flow
+// Exemple II
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 
 void donner(char *ongName, int montant) {
@@ -8,9 +12,15 @@ void donner(char *ongName, int montant) {
 int main(int argc, char *argv[]){
     char ong[8];
     int montant = 1000;
-    printf("Faire un don\n-------------\n\n");
-    printf("\t A quelle ONG souhaitez-vous faire votre don ?\n \t >  ");
-    gets(ong);
+ 
+    if (argc!=1) 
+        strcpy(ong,argv[1]);        // Aie, aie, aie
+    else
+    {
+        printf("\n\tusage: %s <destinataire>\n\n",argv[0]);
+        exit(0);
+     }
+
     donner(ong, montant);
     printf("Un grand MERCI\n");
     return 0;
