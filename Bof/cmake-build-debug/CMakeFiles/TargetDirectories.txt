@@ -1,0 +1,3 @@
+C:/Users/erick/code/Bof/cmake-build-debug/CMakeFiles/Bof.dir
+C:/Users/erick/code/Bof/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/erick/code/Bof/cmake-build-debug/CMakeFiles/rebuild_cache.dir
