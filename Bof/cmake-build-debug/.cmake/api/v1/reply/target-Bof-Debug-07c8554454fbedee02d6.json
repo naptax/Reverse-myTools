@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/Bof.exe"
+			"path" : "BIN-Windows/Bof.exe"
 		},
 		{
-			"path" : "bin/Bof.pdb"
+			"path" : "BIN-Windows/Bof.pdb"
 		}
 	],
 	"backtrace" : 1,

@@ -61,15 +61,15 @@ build CMakeFiles/Bof.dir/bof-1.c.obj: C_COMPILER__Bof_Debug C$:/Users/erick/code
 
 
 #############################################
-# Link the executable bin\Bof.exe
+# Link the executable BIN-Windows\Bof.exe
 
-build bin/Bof.exe: C_EXECUTABLE_LINKER__Bof_Debug CMakeFiles/Bof.dir/bof-1.c.obj
+build BIN-Windows/Bof.exe: C_EXECUTABLE_LINKER__Bof_Debug CMakeFiles/Bof.dir/bof-1.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Bof.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = bin\Bof.exe
+  TARGET_FILE = BIN-Windows\Bof.exe
   TARGET_IMPLIB = libBof.dll.a
   TARGET_PDB = Bof.exe.dbg
 
@@ -99,9 +99,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Bof: phony bin/Bof.exe
+build Bof: phony BIN-Windows/Bof.exe
 
-build Bof.exe: phony bin/Bof.exe
+build Bof.exe: phony BIN-Windows/Bof.exe
 
 # =============================================================================
 # Folder targets.
@@ -111,7 +111,7 @@ build Bof.exe: phony bin/Bof.exe
 #############################################
 # Folder: C:/Users/erick/code/Bof/cmake-build-debug
 
-build all: phony bin/Bof.exe
+build all: phony BIN-Windows/Bof.exe
 
 # =============================================================================
 # Built-in targets
