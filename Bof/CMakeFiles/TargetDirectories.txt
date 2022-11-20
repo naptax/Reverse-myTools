@@ -1,0 +1,3 @@
+/home/naptax/code/Bof/CMakeFiles/Bof-tuto.dir
+/home/naptax/code/Bof/CMakeFiles/edit_cache.dir
+/home/naptax/code/Bof/CMakeFiles/rebuild_cache.dir

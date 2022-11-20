@@ -1,0 +1,1 @@
+/usr/bin/cc -m32 CMakeFiles/Bof-tuto.dir/bof-1.c.o -o bin/LINUX-ELF/Bof-tuto 
