@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_BUF: phony || CMakeFiles/BUF.dir
 
 build CMakeFiles/BUF.dir/main.c.o: C_COMPILER__BUF_Debug /home/naptax/code/BUF/main.c || cmake_object_order_depends_target_BUF
   DEP_FILE = CMakeFiles/BUF.dir/main.c.o.d
-  FLAGS = -g -m32 --no-stack-protector -std=gnu99
+  FLAGS = -g -m32 -no-pie -fno-stack-protector -std=gnu99
   OBJECT_DIR = CMakeFiles/BUF.dir
   OBJECT_FILE_DIR = CMakeFiles/BUF.dir
 
