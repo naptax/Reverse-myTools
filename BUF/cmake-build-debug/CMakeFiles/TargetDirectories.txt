@@ -1,3 +1,0 @@
-/home/naptax/code/BUF/cmake-build-debug/CMakeFiles/BUF.dir
-/home/naptax/code/BUF/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/naptax/code/BUF/cmake-build-debug/CMakeFiles/rebuild_cache.dir
