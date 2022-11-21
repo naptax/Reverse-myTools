@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = 
 
-C_FLAGS = -m32 -no-pie -fno-stack-protector -std=gnu99
+C_FLAGS = -m32 -no-pie -fno-stack-protector -z execstack -std=gnu99
 

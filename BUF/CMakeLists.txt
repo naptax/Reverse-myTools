@@ -9,5 +9,5 @@ add_link_options(-m32)
 
 add_compile_options(-no-pie)
 add_compile_options(-fno-stack-protector)
-
+add_compile_options(-z execstack)
 add_executable(BUF main.c)
