@@ -1,6 +1,9 @@
 CMakeCache.txt
 CMakeCache
+.gdb_history
 debug/
 .idea/
 CMakeFiles/
+*.i64
+*.32
 
