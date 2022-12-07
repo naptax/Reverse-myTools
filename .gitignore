@@ -5,6 +5,5 @@ debug/
 .idea/
 CMakeFiles/
 bin/
-*.i64
-*.32
+cmake-build-*/
 
