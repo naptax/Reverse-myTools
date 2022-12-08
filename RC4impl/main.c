@@ -28,11 +28,12 @@ int main(int argc, char *argv[]) {
     memset(input,0, MAX_LEN_MSG);
     memset(output,0, MAX_LEN_MSG);
 
-    strncpy((char *) input, argv[1], msglength); // copie mon argument dans un buffer de travail
+    strncpy((char *) input, argv[1], msglength);
 
-    // Notre clé de chiffrement/déchiffrement = "password"
-    // Pour comprendre sa conversion en unicode https://gchq.github.io/CyberChef/#recipe=To_Charcode('Space',16)&input=cGFzc3dvcmQ
-    u_char key[]={0x70,0x61,0x73,0x73,0x77,0x6f,0x72,0x64};
+    /****** A NE PAS FAIRE *****/
+    u_char *key = "password";
+
+    printf("Cle RC4 = %s ", key);
 
     // LE CHIFFREMENT
     printf("\n\n#### Chiffrement ####");
@@ -57,12 +58,18 @@ int main(int argc, char *argv[]) {
     exit(0);
 }
 
+/*  +++++++++++++++ CYBER CHEF  CORNER +++++
+ *  Pour verifier la validite de mon implementation : https://gchq.github.io/CyberChef/#recipe=RC4(%7B'option':'UTF8','string':'password'%7D,'Hex','UTF8')&input=YmUgYjcgN2IgNGEgMDkgNzggZjMgZTYgMjggMWEgZTcgMzEgN2MgMDQgZmY
+ */ ++++++++++++++++++++++++++++++++++++++++++
 
 /* Initialise le tableau d'état */
 void initialize(u_char *State) {
     int i;
+
+    printf("\n\n --| E T A P E   1 : Initialisation du tableau d etat \n");
     for(i=0; i<256; i++) {
         State[i] = i;
+        printf("[%d] ", State[i]);
     }
 }
 
@@ -78,10 +85,11 @@ void swap(u_char *i, u_char *j) {
 /* KSA */
 void ksa(u_char *State, u_char *key, int keylen) {
     int i, j=0;
-
+    printf("\n\n -- | E T A P E   2 : Post KSA\n");
     for(i=0; i<256; i++) {
         j = (j + State[i] + key[i%keylen]) % 256;
         swap(&State[i], &State[j]);
+        printf("[%d] ", State[i]);
     }
 }
 
@@ -90,6 +98,8 @@ u_char * prng(u_char *State, int msglength) {
     int i=0, j=0, k;
 
     u_char *keystream;
+
+    printf("\n\n --| E T A P E   3 : PRNG, generation du keystream \n\n");
 
     keystream = (u_char *)malloc(sizeof(u_char)*msglength);
 
@@ -100,6 +110,7 @@ u_char * prng(u_char *State, int msglength) {
         swap(&State[i], &State[j]);
 
         keystream[k] = State[(State[i]+State[j]) % 256];
+        printf("[%d] ", keystream[k]);
     }
     return keystream;
 }
@@ -118,9 +129,13 @@ void rc4(u_char *key, u_char *input, u_char *output, int msglen) {
     // 2.
     ksa(State, key, keylen);
 
-    // 3.
+    // 3. Generation du Keystream avec un PRNG
     keystream = prng(State, msglen);
 
-    for(i=0; i<msglen; i++)
+    // 4. XOR "membre a membre" entre l input et le Keystream
+    printf("\n\n --| E T A P E   4 : XOR avec le keystream \n\n");
+    for(i=0; i<msglen; i++) {
         output[i] = input[i] ^ keystream[i];
+        printf("[%d] ", output[i]);
+    }
 }
