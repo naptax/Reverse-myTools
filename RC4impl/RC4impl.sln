@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RC4impl", "RC4impl.vcxproj", "{2436FB80-4D38-34F1-AF79-AA65545744AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		MinSizeRel|x64 = MinSizeRel|x64
+		Release|x64 = Release|x64
+		RelWithDebInfo|x64 = RelWithDebInfo|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2436FB80-4D38-34F1-AF79-AA65545744AF}.Debug|x64.ActiveCfg = Debug|x64
+		{2436FB80-4D38-34F1-AF79-AA65545744AF}.Debug|x64.Build.0 = Debug|x64
+		{2436FB80-4D38-34F1-AF79-AA65545744AF}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{2436FB80-4D38-34F1-AF79-AA65545744AF}.MinSizeRel|x64.Build.0 = MinSizeRel|x64
+		{2436FB80-4D38-34F1-AF79-AA65545744AF}.Release|x64.ActiveCfg = Release|x64
+		{2436FB80-4D38-34F1-AF79-AA65545744AF}.Release|x64.Build.0 = Release|x64
+		{2436FB80-4D38-34F1-AF79-AA65545744AF}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{2436FB80-4D38-34F1-AF79-AA65545744AF}.RelWithDebInfo|x64.Build.0 = RelWithDebInfo|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85B6390C-9931-3BBD-9AB1-E29BEAD06BED}
+	EndGlobalSection
+EndGlobal

@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <strings.h>
+
 
 
 #define MAX_LEN_MSG 4096
@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
 
 /*  +++++++++++++++ CYBER CHEF  CORNER +++++
  *  Pour verifier la validite de mon implementation : https://gchq.github.io/CyberChef/#recipe=RC4(%7B'option':'UTF8','string':'password'%7D,'Hex','UTF8')&input=YmUgYjcgN2IgNGEgMDkgNzggZjMgZTYgMjggMWEgZTcgMzEgN2MgMDQgZmY
- */ ++++++++++++++++++++++++++++++++++++++++++
+/* ++++++++++++++++++++++++++++++++++++++++++
 
 /* Initialise le tableau d'état */
 void initialize(u_char *State) {
