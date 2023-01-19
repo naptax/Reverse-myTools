@@ -10,7 +10,7 @@ fn main() {
 
     reader.read_to_end(&mut enc_code).unwrap(); // Charge le contenu du buffer dans mon vecteur
     
-    let code_offset = 0x0000014E; // offset du début du code à XORé 
+    let code_offset = 0x0000014E; // offset du début du code à XORer 
     enc_code = enc_code[code_offset..].to_vec();
     
     let key: u32 = 0x919E1E2E; // la clé avec laquelle est réalisé le XOR
@@ -20,7 +20,7 @@ fn main() {
     for i in 0..enc_code.len() {
         out.push(enc_code[i] ^ key.to_le_bytes()[i % 4]); // fait le XOR
     }
-    /* le modulo 4 permet de s'assurer que la clé est utilisée de manière cyclique pour chacun des bytes de la variable enc_code 
+    /* Le modulo 4 permet de s'assurer que la clé est utilisée de manière cyclique pour chacun des bytes de la variable enc_code 
     en utilisant toujours les 4 premiers bytes de la clé pour chiffrer les 8 premiers bytes de la variable enc_code, 
     les 4 prochains bytes de la clé pour chiffrer les 8 prochains bytes de la variable enc_code, etc. */
     
