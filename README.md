@@ -9,7 +9,7 @@
 [![Build: CMake](https://img.shields.io/badge/Build-CMake-green.svg)](https://cmake.org/)
 [![Build: Cargo](https://img.shields.io/badge/Build-Cargo-orange.svg)](https://doc.rust-lang.org/cargo/)
 
-Collection d'outils éducatifs pour l'apprentissage de la rétro-ingénierie, de la sécurité informatique et des techniques d'exploitation. Chaque répertoire contient un outil spécialisé avec sa propre documentation.
+Ma Collection d'outils "HomeMade" pour l'apprentissage de la rétro-ingénierie, de la sécurité informatique et des techniques d'exploitation. Chaque répertoire contient un outil spécialisé avec sa propre documentation.
 
 ## 🛠️ Outils Disponibles
 
